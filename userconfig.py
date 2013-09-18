@@ -28,10 +28,10 @@ config['instrument_server'] = False
 config['datadir'] = '../data'
 
 ## This sets a default directory for qtlab to start in
-#config['startdir'] = 'd:/scripts'
+config['startdir'] = '..'
 
 ## A default script (or list of scripts) to run after qtlab started
-config['startscript'] = []      #e.g. 'initscript1.py'
+config['startscript'] = ['initscript.py']      #e.g. 'initscript1.py'
 
 ## A default script (or list of scripts) to run when qtlab closes
 config['exitscript'] = []       #e.g. ['closescript1.py', 'closescript2.py']
@@ -39,19 +39,19 @@ config['exitscript'] = []       #e.g. ['closescript1.py', 'closescript2.py']
 # Add directories containing scripts here. All scripts will be added to the
 # global namespace as functions.
 config['scriptdirs'] = [
-        'examples/scripts',
-#        'd:/scripts',
+        'qtlab/examples/scripts',
+        'scripts',
 ]
 
 ## This sets a user instrument directory
 ## Any instrument drivers placed here will take
 ## preference over the general instrument drivers
-#config['user_insdir'] = 'd:/instruments'
+config['user_insdir'] = 'instruments'
 
 ## For adding additional folders to the 'systm path'
 ## so python can find your modules
 #import sys
-#sys.path.append('d:/folder1')
+sys.path.append('modules')
 #sys.path.append('d:/folder2')
 
 # Whether to start the GUI automatically
