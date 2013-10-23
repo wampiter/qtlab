@@ -7,3 +7,4 @@ tmp
 desktop.ini
 qtlab.lock
 gui_client.cfg
+3rd_party/gnuplot/demo/*
