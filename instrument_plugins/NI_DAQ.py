@@ -48,7 +48,7 @@ class NI_DAQ(Instrument):
         for ch_out in self._get_output_channels():
             ch_out = _get_channel(ch_out)
             self.add_parameter(ch_out,
-                flags=Instrument.FLAG_SET,
+                flags=Instrument.FLAG_SET+Instrument.FLAG_SOFTGET,
                 type=types.FloatType,
                 units='V',
                 tags=['sweep'],
