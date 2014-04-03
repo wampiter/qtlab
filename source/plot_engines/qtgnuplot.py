@@ -133,6 +133,8 @@ class _QTGnuPlot():
         'legendpos': 'set key %s\n',
 
         'plottitle': 'set title "%s"\n',
+
+        'multiplot': 'set multiplot layout %s,%s\n'
     }
 
     def __init__(self):
